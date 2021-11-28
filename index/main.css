@@ -12,12 +12,3 @@ html {
 .close {
     display: none !important;
 }
-.active {
-    display: block !important;
-}
-.active_list {
-    background-color: rgb(0, 190, 204);
-}
-.shadow {
-    background-color: rgba(0, 0, 0, 0.3)
-}
