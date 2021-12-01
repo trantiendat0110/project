@@ -1,0 +1,33 @@
+* {
+    padding: none;
+    margin: none;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#main-body {
+    position: relative;
+    text-align: center;
+}
+#container {
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+}
+.BtnPlay {
+    font-size: 20px;
+    color: aliceblue !important;
+    padding: 10px !important;
+    background-color: rgb(143, 0, 107);
+}
+
+.main-nav button.active {
+    background-color: violet;
+    color: white !important;
+}
+.main-list.active_list {
+    box-shadow: 0 0 10px 5px rgba(238, 0, 0, 0.5) !important;
+
+}
+.activeSong {
+
+}

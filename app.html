@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Music</title>
+</head>
+<body>
+    <div id="main-body">
+        <div id = "container">
+            <div id="content">
+                <div class="header">
+                    <h2>Now Playing</h2>
+                    <p>Tên bài hát</p>
+                </div>
+                <div class="cd">
+                    <img id="thumb" src="./assets/img/AnhsaiRoi.jpg" alt="">
+                </div>
+                <div class="nav">
+                    <div class="main-nav">
+                        <button id="repeat"><i class="fas fa-repeat"></i></button>
+                        <button id="back"><i class="fas fa-backward"></i></button>
+                        <button id="start" class="BtnPlay"><i class="far fa-play-circle"></i></button>
+                        <button id="next"><i class="fas fa-forward"></i></button>
+                        <button class="" id="random"><i class="fas fa-random"></i></button>
+                    </div>
+                    <audio id="audio" src=""></audio>
+                </div>
+                <input id="progress" class="progress" type="range" value="0" step="0.1" min="0" max="100">
+            </div>
+            <div id="playList"></div>
+        </div>
+    </div>
+    <script src="./assets/css/app.js"></script>
+</body>
+</html>
