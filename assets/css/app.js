@@ -143,6 +143,7 @@ const app = {
         app.nextSong()
       }
       app.renDer()
+      app.scrollIntoView()
       
     }
     backSong.onclick = (e) => {
@@ -153,6 +154,8 @@ const app = {
         app.backSong()
       }
       app.renDer()
+      app.scrollIntoView()
+
 
     }
     // xử lý khi hết bài
@@ -180,8 +183,24 @@ const app = {
     repeatBtn.onclick = () => {
       app.repeatBtn()
     }
-    // xử lý repeat hoạc random song
+    // xu ly xu kien phat bai hat khi click vao bai hat do
+    app.activeSong()
     
+  },
+  activeSong: () => {
+    const elementSong = $$('.main-list')
+    elementSong.forEach((song, index) => {
+      song.onclick = (e) => {
+        $('.active_list').classList.remove('active_list')
+        song.classList.add('active_list')
+        app.playWhenClicked(song, index)
+        audio.play()
+      }
+    })
+  },
+  playWhenClicked: (song, ind) => {
+    app.currentIndex = ind
+    app.loadCurrentSong()
   },
   playRepeatSong: () => {
     audio.play()
@@ -208,10 +227,10 @@ const app = {
     audio.play()
   },
   nextSong: () => {
+    app.currentIndex++;
     if (app.currentIndex >= app.songs.length) {
         app.currentIndex = 0
     }
-    app.currentIndex++;
     app.loadCurrentSong()
     audio.play()
 
@@ -221,11 +240,20 @@ const app = {
     imgSong.setAttribute('src', app.currentSong.img)
     audio.src = app.currentSong.path
   },
+  scrollIntoView: () => {
+    setTimeout(() => {
+      var ElementActive = $('.active_list')
+      // console.log(ElementActive)
+      ElementActive.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+        inline: "nearest"});
+    })
+  },
+
   start:  () => {
     // upLoad playlist 
     app.renDer()
-
-
 
     // định nghĩa thuộc tính 
     app.definePropertys()
@@ -241,3 +269,4 @@ const app = {
   },
 }
 app.start();
+
