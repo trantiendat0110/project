@@ -13,8 +13,8 @@
 }
 .home_list_scorses h4{
     /* text-align: center; */
-    min-height: 30px;
-    font-size: 13px;
+    min-height: 35px;
+    font-size: 15px;
     /* display: flex; */
 }
 .home_list_scorse {
@@ -51,9 +51,9 @@
     z-index: 1000;
 }
 .main-nav-home button{
-    margin: 5px;    
+    margin: 10px;    
     clip-path: circle(50%);
-    font-size: 10px;
+    font-size: 20px;
     border: none;
     background-color: #ccc;
 }
@@ -99,7 +99,7 @@
     border-radius: 15px;
 }
 #main-music {
-    animation: slideBar1 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    animation: slideBar1 0.5s ease;
 }
 @keyframes slideBar {
     from {
@@ -111,7 +111,7 @@
 }
 @keyframes slideBar1 {
     from {
-        transform: translateX(400px);
+        transform: translateX(300px);
     }
     to {
         transform: translateX(0);

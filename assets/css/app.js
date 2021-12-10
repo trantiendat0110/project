@@ -91,7 +91,7 @@ const app = {
   },
   handleEvent: () => {
     // sử lý trượt màn hình
-    const cdImgWidth = cdImg.offsetWidth
+    const cdImgWidth = 240
     document.onscroll = () => {
       const scroll = document.documentElement.scrollTop || window.scrollY
       const newWidthCd = cdImgWidth - scroll
