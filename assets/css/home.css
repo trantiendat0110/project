@@ -100,7 +100,7 @@
     border-radius: 15px;
 }
 #main-music {
-    animation: slideBar1 1s ease;
+    animation: slideBar1 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 @keyframes slideBar {
     from {
