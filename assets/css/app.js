@@ -283,8 +283,8 @@ const app = {
 const home = {
   
   renDer: () => {
-    const elementLove = $('.home_list_scorses')
-    const htmls = app.songs.map((song, index) => {
+    const elementLove = $('.list_myLove')
+    const htmls1 = app.songs.map((song, index) => {
       return `
       <div class="home_list_scorse">
         <img src="${song.img}" alt="">
@@ -293,8 +293,21 @@ const home = {
       </div>
       `
     })
-    const html = htmls.join('')
-    elementLove.innerHTML = html
+    const html1 = htmls1.join('')
+    elementLove.innerHTML = html1
+    // ////////////////
+    const elementSongTrending = $('.list_trending')
+    const htmls2 = app.songs.map((song, index) => {
+      return `
+      <div class="home_list_scorse">
+        <img src="${song.img}" alt="">
+        <h4 style="color: crimson;">${song.name}</h4>
+        <p>${song.singer}</p>
+      </div>
+      `
+    })
+    const html2 = htmls2.join('')
+    elementSongTrending.innerHTML = html2
   },
   handleEventHome: () =>{
     // xử lý click list home

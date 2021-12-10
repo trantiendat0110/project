@@ -11,6 +11,9 @@
 .nav_header i {
     padding: 20px;
 }
+.home_list_scorses {
+    text-align: center;
+}
 .home_list_scorses h4{
     /* text-align: center; */
     min-height: 35px;
