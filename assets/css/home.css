@@ -22,7 +22,7 @@
     display: inline-block;
     margin: 10px;
     font-size: 10px;
-    max-width: 95px;
+    max-width: 99px;
     min-height: 200px;
 }
 .home_list_scorse img {
@@ -62,7 +62,6 @@
     font-size: 30px;
     padding: 10px;
     position: relative;
-    bottom: 30px;
     background-color: crimson;
 }
 .navBar_home {
