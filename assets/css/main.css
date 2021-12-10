@@ -9,15 +9,19 @@
     position: relative;
     text-align: center;
 }
-#container {
+#main-music {
     position: absolute;
     background-color: rgb(255, 255, 255);
+    display: none;
+}
+#main_home {
+    /* display: none; */
 }
 .BtnPlay {
     font-size: 20px;
     color: aliceblue !important;
     padding: 10px !important;
-    background-color: rgb(143, 0, 107);
+    background-color: crimson;
 }
 
 .main-nav button.active {
@@ -28,6 +32,9 @@
     box-shadow: 0 0 10px 5px rgba(238, 0, 0, 0.5) !important;
 
 }
-.activeSong {
-
+.open {
+    display: block !important;
+}
+.close {
+    display: none !important;
 }

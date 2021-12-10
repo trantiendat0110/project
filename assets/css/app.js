@@ -10,7 +10,13 @@ const nextSong = $('#next')
 const backSong = $('#back')
 const randomBtn = $('#random')
 const repeatBtn = $('#repeat')
+const navBar_home = $('.navBar_home')
+const elementHome = $('#main_home')
+const elementMusic = $('#main-music')
+
+var a = 1;
 const app = {
+  navbar: false,
   btnRepeat: false,
   onUpBtnRandom: false, 
   currentIndex: 0,
@@ -252,6 +258,7 @@ const app = {
   },
 
   start:  () => {
+    // interFace app
     // upLoad playlist 
     app.renDer()
 
@@ -264,9 +271,79 @@ const app = {
     // SỬ lý sự kiện
     app.handleEvent()
 
+    // interFace home
 
+    // load songlist 
+    home.renDer()
     
+    // // xử lý sự kiện
+    home.handleEventHome()
   },
+}
+const home = {
+  
+  renDer: () => {
+    const elementLove = $('.home_list_scorses')
+    const htmls = app.songs.map((song, index) => {
+      return `
+      <div class="home_list_scorse">
+        <img src="${song.img}" alt="">
+        <h4 style="color: crimson;">${song.name}</h4>
+        <p>${song.singer}</p>
+      </div>
+      `
+    })
+    const html = htmls.join('')
+    elementLove.innerHTML = html
+  },
+  handleEventHome: () =>{
+    // xử lý click list home
+    const iconList = $("#iconList")
+    iconList.onclick = () => {
+      home.openNavbar()
+    }
+    // xử lý click back home
+    const iconBackList = $('#iconBackList')
+    const iconBackHome = $('#iconBackHome')
+    iconBackList.onclick = () => {
+      home.closeNavbar() 
+    }
+    iconBackHome.onclick = () => {
+      home.closeNavbar() 
+    }
+    // xử lý chuyển qua nghe nhạc
+    const iconMusic = $('#iconMusic')
+    iconMusic.onclick = () => {
+      home.openInterFaceMusic()
+    }
+    // xử lý quay về home
+    const elementBackHome = $('#backHome')
+    elementBackHome.onclick = () => {
+      console.log(1)
+      home.closeInterFaceMusic()
+    }
+  },
+  closeInterFaceMusic: () => {
+    elementHome.classList.add('open')
+    elementHome.classList.remove('close')
+    elementMusic.classList.add('close')
+    elementMusic.classList.remove('open')
+  },
+  openInterFaceMusic: () => {
+    elementHome.classList.add('close')
+    elementHome.classList.remove('open')
+    elementMusic.classList.add('open')
+    elementMusic.classList.remove('close')
+  },
+  openNavbar: () => {
+    navBar_home.classList.remove('close')
+    navBar_home.classList.add('open')
+  },
+  closeNavbar: () => {
+    navBar_home.classList.remove('open')
+    navBar_home.classList.add('close')
+  }
+
 }
 app.start();
 

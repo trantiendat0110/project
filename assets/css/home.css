@@ -1,0 +1,120 @@
+.header_home {
+    border-bottom: 1px solid #ccc;
+}
+#main_home {
+    text-align: left;
+}
+.nav_header {
+    display: flex;
+    justify-content: space-between;
+}
+.nav_header i {
+    padding: 20px;
+}
+.home_list_scorses h4{
+    /* text-align: center; */
+    min-height: 30px;
+    font-size: 13px;
+    /* display: flex; */
+}
+.home_list_scorse {
+    text-align: center;
+    display: inline-block;
+    margin: 10px;
+    font-size: 10px;
+    max-width: 95px;
+    min-height: 200px;
+}
+.home_list_scorse img {
+    max-width: 110px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 1px rgb(177, 176, 176);
+}
+#search input{
+    border: none;
+    box-shadow: 0 0 1px 1px #ccc;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+}
+.title_list {
+    padding: 10px;
+}
+.nav-home {
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #fff;
+    z-index: 1000;
+}
+.main-nav-home button{
+    margin: 15px;    
+    clip-path: circle(50%);
+    font-size: 20px;
+    border: none;
+    background-color: #ccc;
+}
+.main-nav-home #start {
+    max-height: 50px;
+    font-size: 30px;
+    padding: 10px;
+    position: relative;
+    bottom: 30px;
+    background-color: crimson;
+}
+.navBar_home {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    animation: slideBar 0.5s ease;
+    display: none;
+}
+.navBar_home > i {
+    font-size: 40px;
+    padding: 20px;
+}
+.navBar_home ul{
+    margin-left: -50px;
+}
+.navBar_home li i {
+    margin: 20px;
+}
+.navBar_home li {
+    padding: 20px;
+    font-size: 25px;
+    list-style-type: none;
+}
+.navBar_home button {
+    border: none;
+    margin-left: 50px;
+    margin-top: 20px;
+    padding: 10px;
+    color: #fff;
+    border-radius: 15px;
+}
+#main-music {
+    animation: slideBar1 1s ease;
+}
+@keyframes slideBar {
+    from {
+        transform: translateX(-400px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+@keyframes slideBar1 {
+    from {
+        transform: translateX(400px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}

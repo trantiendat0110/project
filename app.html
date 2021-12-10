@@ -6,29 +6,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
     <link rel="stylesheet" href="./assets/css/main.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/app.css">
+    <link rel="stylesheet" href="./assets/css/home.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <title>Music</title>
 </head>
 <body>
-    <div id="main-body">
-        <div id = "container">
+        <div id="main_home">
+            <div class="header_home">
+                <div class="nav_header">
+                    <i id="iconList" class="fal fa-stream"></i>
+                    <h4 style="color: crimson;">Home</h4>
+                    <i class="fal fa-cog"></i>
+                </div>
+            </div>
+            <div class="home-body">
+                <div id="search">
+                    <input type="text" placeholder="Search">
+                </div>
+                <div class="home_list">
+                    <div class="title_list">
+                        <h3>Bài hát yên thích</h3>
+                    </div>
+                    <div class="home_list_scorses">
+                        <div class="home_list_scorse">
+                            <img src="./assets/img/AnhsaiRoi.jpg" alt="">
+                            <h4 style="color: crimson;">Anh sai rồi</h4>
+                            <p>Sơn tùng MTP</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="home_list">
+                    <div class="title_list">
+                        <h3>Nổi Bật</h3>
+                    </div>
+                    <div class="home_list_scorses">
+                        <div class="home_list_scorse">
+                            <img src="./assets/img/AnhsaiRoi.jpg" alt="">
+                            <h4 style="color: crimson;">Anh sai rồi</h4>
+                            <p>Sơn tùng MTP</p>
+                        </div>
+                    </div>
+                    
+
+                </div>
+            </div>
+            
+            <div class="navBar_home">
+                <i id="iconBackList" class="fal fa-long-arrow-left"></i>
+                <ul>
+                    <li id="iconBackHome" style="color: crimson;"><i class="fal fa-home-lg-alt"></i>Home</li>
+                    <li id="iconMusic" style="color: slateblue;"><i class="fal fa-music"></i>Nghe nhạc</li>
+                    <li style="color: rgb(0, 133, 133);"><i class="fal fa-user"></i>Tài khoản</li>
+                    <button style="background-color: green;">Đăng nhập</button>
+                    <button style="background-color: black;">Đăng ký</button>
+                </ul>
+            </div>
+            
+        </div>
+        <div class="nav-home">
+            <div class="main-nav-home">
+                <button id="repeat"><i class="fas fa-repeat"></i></button>
+                <button id="back"><i class="fas fa-backward"></i></button>
+                <button id="start" class="BtnPlay"><i class="far fa-play-circle"></i></button>
+                <button id="next"><i class="fas fa-forward"></i></button>
+                <button class="" id="random"><i class="fas fa-random"></i></button>
+            </div>
+            <audio id="audio" src=""></audio>
+        </div>
+        <div id = "main-music">
+            
             <div id="content">
+                
                 <div class="header">
+                    <div id="nav-music">
+                        <i id="backHome" class="far fa-long-arrow-alt-left"></i>
+                    </div>
                     <h2>Now Playing</h2>
                     <p>Tên bài hát</p>
                 </div>
                 <div class="cd">
                     <img id="thumb" src="./assets/img/AnhsaiRoi.jpg" alt="">
-                </div>
-                <div class="nav">
-                    <div class="main-nav">
-                        <button id="repeat"><i class="fas fa-repeat"></i></button>
-                        <button id="back"><i class="fas fa-backward"></i></button>
-                        <button id="start" class="BtnPlay"><i class="far fa-play-circle"></i></button>
-                        <button id="next"><i class="fas fa-forward"></i></button>
-                        <button class="" id="random"><i class="fas fa-random"></i></button>
-                    </div>
-                    <audio id="audio" src=""></audio>
                 </div>
                 <input id="progress" class="progress" type="range" value="0" step="0.1" min="0" max="100">
             </div>
@@ -36,5 +94,7 @@
         </div>
     </div>
     <script src="./assets/css/app.js"></script>
+    <script src="./assets/css/index.js"></script>
+    <script src="./assets/css/home.js"></script>
 </body>
 </html>
