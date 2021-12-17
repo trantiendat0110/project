@@ -75,7 +75,7 @@
     width: 100%;
     height: 100%;
     background-color: rgb(255, 255, 255);
-    animation: slideBar 0.5s ease;
+    animation: slideBar1 0.5s ease;
     display: none;
 }
 .navBar_home > i {
@@ -104,19 +104,12 @@
 #main-music {
     animation: slideBar1 0.5s ease;
 }
-@keyframes slideBar {
-    from {
-        transform: translateX(-400px);
-    }
-    to {
-        transform: translateX(0);
-    }
-}
 @keyframes slideBar1 {
     from {
-        transform: translateX(300px);
+        opacity: 0.5;
     }
     to {
-        transform: translateX(0);
+        opacity: 1;
+
     }
 }

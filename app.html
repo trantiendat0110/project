@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="./assets/css/app.css">
     <link rel="stylesheet" href="./assets/css/home.css">
+    <link rel="stylesheet" href="./assets/css/user.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <title>Music</title>
 </head>
@@ -17,7 +18,7 @@
                 <div class="nav_header">
                     <i id="iconList" class="fal fa-stream"></i>
                     <h4 style="color: crimson;">Home</h4>
-                    <i class="fal fa-cog"></i>
+                    <i id="iconSetting" class="fal fa-cog"></i>
                 </div>
             </div>
             <div class="home-body">
@@ -73,6 +74,48 @@
                 <button class="" id="random"><i class="fas fa-random"></i></button>
             </div>
             <audio id="audio" src=""></audio>
+        </div>
+        <div id="main-setting-user">
+            <div class="user_header">
+                <i  id="user_backHome" class="fal fa-long-arrow-left"></i>
+                <h4 style="color: crimson; margin-top: 25px;">User</h4>
+                <i class="fal fa-ellipsis-h"></i>
+            </div>
+            <div class="user_content">
+                <img src="./assets/img/AnhsaiRoi.jpg" alt="" style="width: 100px;">
+                <h3>Tiến Đạt <i class="fas fa-chevron-circle-down" style="color: rgb(0, 160, 209);"></i></h3>
+                <p>SDT: 0868650722</p>
+                <div id="user_nav">
+                    <div class="user_scorse">
+                        <h2>7</h2>
+                        <p>ALBUMS</p>
+                    </div>
+                    <div class="user_scorse">
+                        <h2>7</h2>
+                        <p>ALBUMS</p>
+                    </div>
+                    <div class="user_scorse">
+                        <h2>7</h2>
+                        <p>ALBUMS</p>
+                    </div>
+                </div>
+                
+            </div>
+            <div id="out">
+                <button style="background-color: crimson; color: #fff;">Đăng Xuất</button>
+            </div>
+            <div class="user_signOut">
+                <form action="">
+                    <label for="">
+                        <p>User</p>
+                        <input type="text">
+                    </label>
+                    <label for="">
+                        <p>Password</p>
+                        <input type="text">
+                    </label>
+                </form>
+            </div>
         </div>
         <div id = "main-music">
             

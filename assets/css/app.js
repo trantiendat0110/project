@@ -13,7 +13,8 @@ const repeatBtn = $('#repeat')
 const navBar_home = $('.navBar_home')
 const elementHome = $('#main_home')
 const elementMusic = $('#main-music')
-
+const elementSetting = $('#iconSetting')
+const mainSetting = $('#main-setting-user')
 var a = 1;
 const app = {
   navbar: false,
@@ -335,6 +336,26 @@ const home = {
       console.log(1)
       home.closeInterFaceMusic()
     }
+    // xử lý mở mở setting
+    elementSetting.onclick = () =>{
+      home.openSetting()
+    }
+    // xử lý đóng setting 
+    const elementUserBackhome = $('#user_backHome')
+    elementUserBackhome.onclick = () => {
+      home.closeSetting()
+    }
+  },
+  closeSetting: ()=>{
+    mainSetting.classList.remove('open')
+    mainSetting.classList.add('close')
+    elementHome.classList.add('open')
+    elementHome.classList.remove('close')
+  },
+  openSetting: () => {
+    mainSetting.classList.add('open')
+    elementHome.classList.add('close')
+    elementHome.classList.remove('open')
   },
   closeInterFaceMusic: () => {
     elementHome.classList.add('open')
