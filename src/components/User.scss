@@ -1,0 +1,63 @@
+#user {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background-image: linear-gradient( to right ,rgb(248, 242, 242), rgb(251, 174, 219));
+    .sign {
+        text-decoration: none;
+        margin-top: 20px;
+        width: 100%;
+        display: block;
+        color: rgba(255, 255, 255, 0.74);
+        border: none;
+        background-color: crimson;
+        padding: 10px;
+        border-radius: 6px;
+    }
+    h3 {
+        color: crimson;
+        padding: 20px;
+    }
+    p {
+        opacity: 0.5;
+    }
+    h4 {
+        opacity: 0.5;
+        font-weight: 100;
+        text-align: right;
+    }
+    h5 {
+        margin-top: 20px;
+        opacity: 0.5;
+    }
+    .link {
+        margin-top: 30px;
+        margin-bottom: 20px;
+        a {
+            width: 200px !important;
+            font-size: 35px;
+            border-radius: 10px;
+            border:#fff solid 2px;
+            background-color: rgba(255, 255, 255, 0.0);
+            padding: 5px 20px 5px 20px;
+            margin: 15px;
+        }
+    }
+    .input {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        input {
+            outline: none;
+            width: 100%;
+            border: solid 1px #ccc;
+            margin: 20px;
+            padding: 15px;
+            border-radius: 10px;
+        }input:focus {
+            border: crimson solid 1px;
+        }
+
+    }
+}
