@@ -1,0 +1,32 @@
+.active {
+  transform: translateY(-20px);
+  border-radius: 50%;
+  border: 6px solid rgb(255, 147, 147);
+  background-color: crimson;
+  animation: cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: all 0.2s ease-out;
+}
+
+
+#nav {
+    z-index: 1100;
+    background-color: crimson;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    width:  100%;
+    li {
+      padding: 10px;
+      list-style-type: none;
+      i {
+        color: #fff;
+        font-size: 25px; 
+      }
+    }
+  }
+.displayNone {
+    display: none;
+}
+
